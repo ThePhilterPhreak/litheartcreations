@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LitHeart Creations - 5D Illuminations</title>
+    <title>My Journey: From Chaos to Art Sensation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,115 +31,6 @@
             text-align: center;
         }
 
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            background-color: #444;
-            margin: 5px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #666;
-        }
-
-        .section {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .section h2 {
-            font-size: 2em;
-            color: #f5f5f5;
-        }
-
-        .section p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-
-        .shop-item {
-            background-color: #222;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .shop-item img {
-            width: 150px;
-            border-radius: 10px;
-        }
-
-        .shop-item-details {
-            margin-left: 20px;
-            flex-grow: 1;
-        }
-
-        .shop-item h3 {
-            font-size: 1.5em;
-            color: #f5f5f5;
-        }
-
-        .shop-item p {
-            font-size: 1em;
-        }
-
-        .shop-item .price {
-            font-size: 1.2em;
-            color: #ffd700;
-        }
-
-        .buy-button {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            font-size: 1em;
-            border-radius: 5px;
-        }
-
-        .buy-button:hover {
-            background-color: #218838;
-        }
-
-        /* Blog section */
-        .blog-section {
-            margin-top: 40px;
-        }
-
-        .post {
-            background-color: #222;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            transition: background-color 0.5s, color 0.5s;
-        }
-
-        .post h3 {
-            font-size: 1.8em;
-            color: #f5f5f5;
-        }
-
-        .post p {
-            font-size: 1.1em;
-        }
-
-        .post .hashtag {
-            color: #888;
-        }
-
-        /* Sort dropdown */
-        .sort-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-
         select {
             padding: 10px;
             background-color: #444;
@@ -153,6 +44,33 @@
             background-color: #666;
         }
 
+        .blog-section, .video-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .post, .video-item {
+            background-color: #222;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .post h2, .video-item h3 {
+            font-size: 1.8em;
+            color: #f5f5f5;
+        }
+
+        .post p, .video-item p {
+            font-size: 1.1em;
+        }
+
+        .post.hashtag, .video-item.hashtag {
+            color: #888;
+        }
+
         footer {
             padding: 20px;
             text-align: center;
@@ -160,7 +78,14 @@
             color: #fff;
         }
 
-        /* Transition to polished, ethereal design */
+        video {
+            width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        /* Transition to polished, artistic style */
         body.transformed {
             background-color: #fff;
             color: #222;
@@ -171,8 +96,7 @@
             color: #222;
         }
 
-        body.transformed .shop-item,
-        body.transformed .post {
+        body.transformed .post, .video-item {
             background-color: #f5f5f5;
             color: #222;
         }
@@ -182,148 +106,93 @@
             color: #222;
         }
 
-        /* Responsive styling */
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            .shop-item {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .shop-item img {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-
-            .shop-item-details {
-                margin-left: 0;
-                text-align: center;
-            }
-        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>LitHeart Creations</h1>
-        <p>5D Illuminations. Where Darkness Glows. What You See is Not What You Get.</p>
+        <h1>My Journey: From Chaos to Art Sensation</h1>
+        <p>The raw truth of how meth saved my life and how I became an art sensation.</p>
     </header>
 
     <nav>
-        <a href="#home">Home</a>
-        <a href="#shop">Shop</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
+        <label for="filter">Sort by: </label>
+        <select id="filter">
+            <option value="default">Select...</option>
+            <option value="chronological">Chronological</option>
+            <option value="hashtags">By Hashtags</option>
+        </select>
     </nav>
 
-    <section class="section" id="home">
-        <h2>Welcome to LitHeart Creations</h2>
-        <p>Experience the magic and mystery of 5D Illuminations—phosphorescent 3D abstract paintings that change as the light transitions. These pieces morph, glow, and provoke, guaranteed to increase your vibrational frequency. Ethereal. Mystical. Multidimensional. See the magic unfold.</p>
-    </section>
-
-    <section class="section" id="shop">
-        <h2>Shop</h2>
-
-        <article class="shop-item">
-            <img src="images/art_1.jpg" alt="Phosphorescent Art 1">
-            <div class="shop-item-details">
-                <h3>Phosphorescent Painting - "Iridescent Morph"</h3>
-                <p>This piece transitions as the light changes, taking you to another dimension.</p>
-                <p class="price">$500</p>
-                <a href="https://etsy.com"><button class="buy-button">Buy Now on Etsy</button></a>
-            </div>
-        </article>
-
-        <article class="shop-item">
-            <img src="images/video_1.jpg" alt="Video Art 1">
-            <div class="shop-item-details">
-                <h3>Special Effects Video - "Mystical Flow"</h3>
-                <p>Perfect for DJs, visual artists, or anyone looking to elevate their vibe with captivating effects.</p>
-                <p class="price">$100</p>
-                <button class="buy-button">Order Custom Video</button>
-            </div>
-        </article>
-    </section>
-
-    <!-- Blog section with sorting functionality -->
-    <section class="section blog-section" id="blog">
-        <h2>Blog: How Meth Saved My Life from Chaos to...</h2>
-        <p>Dive into my journey from the darkness of addiction to the light of creative freedom.</p>
-
-        <!-- Sort dropdown -->
-        <div class="sort-section">
-            <label for="sort">Sort by:</label>
-            <select id="sort">
-                <option value="default">Select...</option>
-                <option value="timeline">Timeline</option>
-                <option value="hashtags">Hashtags</option>
-            </select>
-        </div>
-
-        <article class="post" data-timeline="1" data-hashtag="#struggle #chaos">
-            <h3>The Darkest Days</h3>
-            <p>In the depths of addiction, meth became my only lifeline. This is where my transformation began.</p>
+    <section class="blog-section">
+        <article class="post" data-hashtag="#struggle #chaos">
+            <h2>The Darkest Days</h2>
+            <p>In the depths of addiction, I was searching for something, anything to keep me going. Meth was my lifeline, pulling me from the brink. This is where it all began...</p>
             <p class="hashtag">#struggle #chaos</p>
+            <!-- Embedded video in the blog post -->
+            <video controls>
+                <source src="videos/darkest_days.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </article>
 
-        <article class="post" data-timeline="2" data-hashtag="#transformation #art">
-            <h3>The Transformation: From Lazy to Art Sensation</h3>
-            <p>After rock bottom, art became my savior, pushing me toward creative freedom.</p>
+        <article class="post" data-hashtag="#transformation #art">
+            <h2>Transformation: From Lazy to Art Sensation</h2>
+            <p>After hitting rock bottom, I realized it wasn't enough to just survive. Art became my outlet. Slowly, I started organizing my life, pushing myself beyond comfort, and embracing the artistic side of me that was buried under addiction.</p>
             <p class="hashtag">#transformation #art</p>
-        </article>
-
-        <article class="post" data-timeline="3" data-hashtag="#success #artistic">
-            <h3>The Artistic Breakthrough</h3>
-            <p>This was the moment I realized my art had the power to change not only my life but others as well.</p>
-            <p class="hashtag">#success #artistic</p>
+            <!-- Embedded video in the blog post -->
+            <video controls>
+                <source src="videos/transformation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </article>
     </section>
 
-    <section class="section" id="contact">
-        <h2>Contact</h2>
-        <p>For custom art inquiries, collaborations, or questions, reach out:</p>
-        <form action="mailto:bobee@litheartcreations.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            
-            <button type="submit">Send</button>
-        </form>
+    <section class="video-section">
+        <h2>Video Gallery</h2>
+
+        <article class="video-item" data-hashtag="#raw #personal">
+            <h3>Documenting the Struggle</h3>
+            <p>This video captures some of the raw moments during my journey when I was at my lowest, but it laid the foundation for who I would become.</p>
+            <p class="hashtag">#raw #personal</p>
+            <!-- Video in the video gallery -->
+            <video controls>
+                <source src="videos/documenting_struggle.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </article>
+
+        <article class="video-item" data-hashtag="#success #creative">
+            <h3>The Art Transformation</h3>
+            <p>A visual representation of how my art changed and became the key to my self-sustaining success.</p>
+            <p class="hashtag">#success #creative</p>
+            <!-- Video in the video gallery -->
+            <video controls>
+                <source src="videos/art_transformation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </article>
     </section>
 
     <footer>
-        <p>&copy; 2024 LitHeart Creations. All rights reserved.</p>
+        <p>&copy; 2024 My Personal Journey. All rights reserved.</p>
     </footer>
 
     <script>
-        // Handle sorting by timeline or hashtags
-        const sort = document.getElementById('sort');
-        const posts = Array.from(document.querySelectorAll('.post'));
+        const filter = document.getElementById('filter');
+        const posts = document.querySelectorAll('.post');
 
-        sort.addEventListener('change', function() {
-            const selectedValue = this.value;
-
-            if (selectedValue === 'timeline') {
-                posts.sort((a, b) => a.dataset.timeline - b.dataset.timeline);
-            } else if (selectedValue === 'hashtags') {
-                posts.sort((a, b) => a.dataset.hashtag.localeCompare(b.dataset.hashtag));
+        filter.addEventListener('change', function() {
+            if (this.value === 'chronological') {
+                // Sort posts chronologically (placeholder, requires logic for actual dates)
+                posts.forEach(post => post.style.display = 'block');
+            } else if (this.value === 'hashtags') {
+                // Sort posts by hashtags (currently shows all, can be expanded to filter specific hashtags)
+                posts.forEach(post => post.style.display = 'block');
             }
-
-            // Clear and append sorted posts to blog section
-            const blogSection = document.querySelector('.blog-section');
-            posts.forEach(post => blogSection.appendChild(post));
         });
 
-        // Simulate the gritty to polished design transition
+        // Simulating the transformation effect
         window.addEventListener('scroll', function() {
             if (window.scrollY > 300) {
                 document.body.classList.add('transformed');
